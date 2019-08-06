@@ -20,7 +20,7 @@ export default {
     },
     {
       "title": "Programming skills",
-      "text": "C/C++, Java, HTML/CSS/JS",
+      "text": "HTML/CSS/JS, React, Angular",
     },
     {
       "title": "Education:",

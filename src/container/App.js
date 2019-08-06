@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Rows from '../components/Rows';
-import UaVersion from '../translations/eng';
 import EngVersion from '../translations/eng';
+import UaVersion from '../translations/ua';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
-  const [isEng, setLang] = useState(true);
+  const [isEng, setIsEng] = useState(true);
   const lang = isEng ? EngVersion : UaVersion;
 
   return (
     <div className="container">
-      <Header lang={lang} isEng={isEng} setLang={setLang} />
+      <Header lang={lang} isEng={isEng} setIsEng={setIsEng} />
       <table className="table">
-        <Rows lang={lang} />
+        <tbody>
+          <Rows lang={lang} />
+        </tbody>
       </table>
     </div>
   );
